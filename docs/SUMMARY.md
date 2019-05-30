@@ -26,3 +26,16 @@ Writing tests on response
 https://stackoverflow.com/questions/11885211/how-to-write-a-unit-test-for-a-django-view
 https://docs.djangoproject.com/en/2.2/topics/testing/overview/
 https://stackoverflow.com/questions/40313230/python-unit-test-for-a-function-that-has-try-except
+
+
+###
+Suddenly I found this beautiful blog for developing Django app in Docker
+https://blog.devartis.com/django-development-with-docker-a-completed-development-cycle-7322ad8ba508
+https://blog.devartis.com/
+
+Same blog- how to test the Django app in Docker
+django-development-with-docker-testing-continuous-integration-and-docker-hub-57038ca19773
+###
+
+Running tests - Django and Docker container
+https://howchoo.com/g/y2y1mtkznda/getting-started-with-docker-compose-and-django

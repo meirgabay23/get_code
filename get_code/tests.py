@@ -13,11 +13,12 @@ class TestResponse(TestCase):
         import json
         state = True
         response = self.client.get("/secret/")
+        response = str(response.content, 'utf-8')
         try:
-            response = json.loads(response.content)
+            response = json.loads(response)
         except json.decoder.JSONDecodeError:
             state = False
-        self.assertTrue(state, "Could not convert item to dictionary")
-        
+        self.assertTrue(state)
+
 
         
