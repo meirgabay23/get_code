@@ -24,5 +24,5 @@ def index(request):
         TableName=os.environ['AWS_TABLE_NAME'],
         Key=MyKey
     )
-    
-    return HttpResponse(response)
+
+    return HttpResponse(json.dumps(response["Item"]))

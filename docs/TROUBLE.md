@@ -22,3 +22,6 @@ https://github.com/boto/boto/issues/3194
 
 I had a lot of permission denied errors - had to restart Docker, got fixed wohoo
 Finally boto3 can be imported in views.py
+
+Had an issue with getItem with boto3
+Solution- strip() the ENV_VARIABLES, they "code_name " had extra space :\
