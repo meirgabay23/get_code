@@ -5,3 +5,9 @@ Solution- storing all credentials in my_credentials.py file, and then importing 
 
 Connection refused when used 127.0.0.1:5000
 Changed Gunicorn to run on 0.0.0.0 and it works! :)
+
+How to connect to DynamoDB with Python using hidden credentials?
+https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html
+
+Adding reigon_name to client variable
+https://stackoverflow.com/questions/40377662/boto3-client-noregionerror-you-must-specify-a-region-error-only-sometimes
