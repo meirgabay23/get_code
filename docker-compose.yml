@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:5000 --workers 3
+    volumes:
+      - .:/code
+    ports:
+      - "5000:5000"
