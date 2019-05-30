@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+import os
 
 # Create your views here.
 def index(request):
-    import os, json
     import boto3
     client = boto3.client(
         'dynamodb',

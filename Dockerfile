@@ -7,7 +7,7 @@ LABEL  Meir Gabay
 RUN mkdir /code
 
 # Copy the current directory contents into the container at /code
-COPY . /code
+COPY . /code/
 
 # Set the working directory to /code
 WORKDIR /code
@@ -18,3 +18,6 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 # Set the working directory to /code
 RUN python manage.py migrate
+
+# Fix the import boto3
+RUN pip install --upgrade --user boto3

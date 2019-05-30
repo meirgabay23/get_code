@@ -11,3 +11,10 @@ https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html
 
 Adding reigon_name to client variable
 https://stackoverflow.com/questions/40377662/boto3-client-noregionerror-you-must-specify-a-region-error-only-sometimes
+
+Couldn't import boto3
+Solution:
+pip install boto
+pip install boto3
+pip install --upgrade --user boto3
+https://github.com/boto/boto/issues/3194
