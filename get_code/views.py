@@ -29,4 +29,5 @@ def index(request):
     item = json.loads(response)
     item = item[os.environ['AWS_RETURN_KEY_VALUE']][os.environ['AWS_RETURN_KEY_TYPE']]
     msg = f"{{ {os.environ['AWS_RETURN_KEY_VALUE']}: {item} }}"
+    
     return HttpResponse(msg)

@@ -21,3 +21,8 @@ https://docs.docker.com/compose/reference/up/
 
 Boto3 get_item()
 https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html?highlight=dynamodb#DynamoDB.Client.get_item
+
+Writing tests on response
+https://stackoverflow.com/questions/11885211/how-to-write-a-unit-test-for-a-django-view
+https://docs.djangoproject.com/en/2.2/topics/testing/overview/
+https://stackoverflow.com/questions/40313230/python-unit-test-for-a-function-that-has-try-except
