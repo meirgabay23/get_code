@@ -18,3 +18,6 @@ https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.
 
 Docker Compose - using "up"
 https://docs.docker.com/compose/reference/up/
+
+Boto3 get_item()
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html?highlight=dynamodb#DynamoDB.Client.get_item
