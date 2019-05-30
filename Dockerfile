@@ -18,6 +18,3 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 # Set the working directory to /code
 RUN python manage.py migrate
-
-# Fix the import boto3
-RUN pip install --upgrade --user boto3
