@@ -18,3 +18,7 @@ pip install boto
 pip install boto3
 pip install --upgrade --user boto3
 https://github.com/boto/boto/issues/3194
+
+
+I had a lot of permission denied errors - had to restart Docker, got fixed wohoo
+Finally boto3 can be imported in views.py
