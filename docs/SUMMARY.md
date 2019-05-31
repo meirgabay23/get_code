@@ -58,3 +58,8 @@ login to travis ... only then the encryption will work
 encrypt the my_credentials.py file
 travis encrypt-file .\mysite\my_credentials.py -add
 https://docs.travis-ci.com/user/encrypting-files/
+
+Gave up on encrypting a file on Windows 10
+Running same command on my Kali Linux VM
+travis login --pro
+travis encrypt-file my_credentials.py -add

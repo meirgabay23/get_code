@@ -46,3 +46,4 @@ Getting bad decrypt
 Used the following line in git-bash instead of in Powershell:
 travis encrypt-file mysite/my_credentials.py mysite/my_credentials.py.enc --add
 https://github.com/travis-ci/travis-ci/issues/8759
+
