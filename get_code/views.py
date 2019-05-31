@@ -4,7 +4,7 @@ import os
 import json
 
 # Create your views here.
-def index(request):
+def secret(request):
     import boto3
     from boto3.dynamodb.conditions import Key
     client = boto3.client(
@@ -30,3 +30,6 @@ def index(request):
     item = item[os.environ['AWS_RETURN_KEY_VALUE']][os.environ['AWS_RETURN_KEY_TYPE']]
     msg = f"\"{{ '{os.environ['AWS_RETURN_KEY_VALUE']}': '{item}' }}\""
     return HttpResponse(msg)
+
+def health(request):
+    pass

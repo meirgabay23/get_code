@@ -1,4 +1,4 @@
 .env
-*.pyc
 encrypted_password.txt
 my_credentials.py
+*.pyc
