@@ -48,3 +48,5 @@ travis encrypt-file mysite/my_credentials.py mysite/my_credentials.py.enc --add
 https://github.com/travis-ci/travis-ci/issues/8759
 Solution in Summary
 
+Travis stopped syncing with Github
+
