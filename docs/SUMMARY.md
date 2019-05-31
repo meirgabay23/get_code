@@ -82,3 +82,16 @@ https://cinhtau.net/2016/09/02/use-travis-ci-in-github-to-build-and-deploy-to-do
 Travis didn't sync with Github so Omer recommended Drone.io
 I used the following drone.yml and tweaked it
 https://www.imagescape.com/blog/2017/04/28/continuous-integration-and-deployment-drone-docker-django-gunicorn-and-nginx-part-2/
+
+Install scoop, so you can install drone (1.1.1)
+https://0-8-0.docs.drone.io/cli-installation/
+https://scoop.sh/
+Powershell: 
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+scoop install drone
+
+
+Authenticate with drone
+https://0-8-0.docs.drone.io/cli-authentication/
+
