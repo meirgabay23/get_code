@@ -1,3 +1,4 @@
 .env
 my_credentials.py
 *.pyc
+*.txt

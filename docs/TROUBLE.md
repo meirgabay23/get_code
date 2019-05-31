@@ -25,3 +25,8 @@ Finally boto3 can be imported in views.py
 
 Had an issue with getItem with boto3
 Solution- strip() the ENV_VARIABLES, they "code_name " had extra space :\
+
+I  got this error on travis:
+# ModuleNotFoundError: No module named 'mysite.my_credentials'
+So I realized I need to use the ".env" file (as instructed) instead of using a python file that
+is not included in the git-repository

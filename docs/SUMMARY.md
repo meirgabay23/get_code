@@ -42,3 +42,16 @@ https://howchoo.com/g/y2y1mtkznda/getting-started-with-docker-compose-and-django
 
 Travis with Django - running tests
 https://medium.com/@MicroPyramid/set-up-travis-ci-for-django-project-427d6dd2f46c
+
+Downloading Ruby so I can run Travis CI on my machine
+I need it for encrypting the .env variables
+https://rubyinstaller.org/downloads/
+
+Run in PowerShell
+gem install travis
+https://github.com/dwyl/learn-travis
+https://github.com/travis-ci/travis.rb#encrypt
+
+encrypt the my_credentials.py file
+travis encrypt-file .\mysite\my_credentials.py -add
+https://docs.travis-ci.com/user/encrypting-files/
