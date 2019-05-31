@@ -32,4 +32,4 @@ def secret(request):
     return HttpResponse(msg)
 
 def health(request):
-    pass
+    return HttpResponse("Yo!")
