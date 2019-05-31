@@ -1,21 +1,20 @@
-pipeline:
-  build:
-    image: python:3.7
-    commands:
-      - openssl aes-256-cbc -K $encrypted_45f3547f7754_key -iv $encrypted_45f3547f7754_iv -md sha256
-        -in ./mysite/my_credentials.py.enc -out ./mysite/my_credentials.py -d
-      - python manage.py test
-      - docker build -t unfor19/get_started .
-      when:
-        branch: [ master ]
-        event: [push, pull_request] # trigger step on push and pull events
-  publish:
-    username: ${DOCKER_USERNAME}
-    password: ${DOCKER_PASSWORD}
-    repo: unfor19/get_code
-    tag: latest
-    file: Dockerfile
+build:
+  image: python:3.7
+  commands:
+    - openssl aes-256-cbc -K $encrypted_45f3547f7754_key -iv $encrypted_45f3547f7754_iv -md sha256
+      -in ./mysite/my_credentials.py.enc -out ./mysite/my_credentials.py -d
+    - python manage.py test
+    - docker build -t unfor19/get_started .
     when:
       branch: [ master ]
-      status: success
-      event: [ push ] # step only triggers on push events
+      event: [push, pull_request] # trigger step on push and pull events
+publish:
+  username: ${DOCKER_USERNAME}
+  password: ${DOCKER_PASSWORD}
+  repo: unfor19/get_code
+  tag: latest
+  file: Dockerfile
+  when:
+    branch: [ master ]
+    status: success
+    event: [ push ] # step only triggers on push events
