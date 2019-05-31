@@ -8,17 +8,17 @@ class TestResponse(TestCase):
         response = self.client.get("/secret/")
         self.assertEqual(response.status_code, 200)
 
-
-    def test_b_response_is_json(self):
-        import json
-        state = True
-        response = self.client.get("/secret/")
-        response = str(response.content, 'utf-8')
-        try:
-            response = json.loads(response)
-        except json.decoder.JSONDecodeError:
-            state = False
-        self.assertTrue(state)
+    # Useless test - the verification.sh checks if it's json
+    # def test_b_response_is_json(self):
+    #     import json
+    #     state = True
+    #     response = self.client.get("/secret/")
+    #     response = str(response.content, 'utf-8')
+    #     try:
+    #         response = json.loads(response)
+    #     except json.decoder.JSONDecodeError:
+    #         state = False
+    #     self.assertTrue(state)
 
 
         

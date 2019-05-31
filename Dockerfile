@@ -16,5 +16,5 @@ WORKDIR /code
 RUN pip install --trusted-host pypi.python.org --upgrade pip
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Set the working directory to /code
+# Run Django migrations
 RUN python manage.py migrate
