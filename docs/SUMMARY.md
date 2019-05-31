@@ -74,3 +74,6 @@ https://stackoverflow.com/questions/39637388/encryption-decryption-doesnt-work-w
 
 Created two environement variables in Travis, DOCKER_USERNAME and DOCKER_PASSWORD
 https://docs.travis-ci.com/user/docker/#pushing-a-docker-image-to-a-registry
+
+Added a deployment code
+https://cinhtau.net/2016/09/02/use-travis-ci-in-github-to-build-and-deploy-to-dockerhub/
