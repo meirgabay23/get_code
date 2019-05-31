@@ -62,4 +62,15 @@ https://docs.travis-ci.com/user/encrypting-files/
 Gave up on encrypting a file on Windows 10
 Running same command on my Kali Linux VM
 travis login --pro
-travis encrypt-file my_credentials.py -add
+travis encrypt-file mysite/my_credentials.py mysite/my_credentials.py.enc --add -r unfor19/get_code
+
+Copied the my_credentials.py.enc from Linux Kali to my Google drive account
+Downloaded the my_credentials.py.enc file from Google drive account to my Windows
+Copied the contents of the travis.yml file K and IV, added "-md sha256" to the travis.yml
+
+WORKS! Encrypted on openSSL 1.1 and decrypted on Travis's openSSL 1.0.2g
+https://stackoverflow.com/questions/39637388/encryption-decryption-doesnt-work-well-between-two-different-openssl-versions/39641378#39641378
+
+
+Created two environement variables in Travis, DOCKER_USERNAME and DOCKER_PASSWORD
+https://docs.travis-ci.com/user/docker/#pushing-a-docker-image-to-a-registry
