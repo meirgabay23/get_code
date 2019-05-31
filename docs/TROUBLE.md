@@ -34,3 +34,10 @@ is not included in the git-repository
 The encryption of my_credentials resulted in a weired "dd" in travis.yml
 I've changed "dd" to "before_install"
 https://github.com/rkh/travis-encrypt-file-example/blob/master/.travis.yml
+
+I realized where this "dd" came from :)
+silly me
+travis encrypt-file .\mysite\my_credentials.py .\mysite\my_credentials.py.enc -add
+I forgot the extra "-" before "-add", so it should be "--add"
+https://github.com/travis-ci/travis-ci/issues/9667
+Final solution: travis encrypt-file .\mysite\my_credentials.py .\mysite\my_credentials.py.enc --add
