@@ -30,3 +30,7 @@ I  got this error on travis:
 # ModuleNotFoundError: No module named 'mysite.my_credentials'
 So I realized I need to use the ".env" file (as instructed) instead of using a python file that
 is not included in the git-repository
+
+The encryption of my_credentials resulted in a weired "dd" in travis.yml
+I've changed "dd" to "before_install"
+https://github.com/rkh/travis-encrypt-file-example/blob/master/.travis.yml
