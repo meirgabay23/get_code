@@ -37,5 +37,8 @@ Same blog- how to test the Django app in Docker
 django-development-with-docker-testing-continuous-integration-and-docker-hub-57038ca19773
 ###
 
-Running tests - Django and Docker container
+Running tests - Django and Docker container - overkill
 https://howchoo.com/g/y2y1mtkznda/getting-started-with-docker-compose-and-django
+
+Travis with Django - running tests
+https://medium.com/@MicroPyramid/set-up-travis-ci-for-django-project-427d6dd2f46c
