@@ -4,6 +4,6 @@ python: '3.7'
 services: docker
 env: DJANGO=2.2.1
 script: python manage.py test
-before_install:
+dd:
 - openssl aes-256-cbc -K $encrypted_8120aa661d02_key -iv $encrypted_8120aa661d02_iv
-  -in my_credentials.py.enc -out .\\mysite\\my_credentials.py -d
+  -in .\\mysite\\my_credentials.py.enc -out .\\mysite\\my_credentials.py -d
