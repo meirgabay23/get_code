@@ -52,6 +52,9 @@ gem install travis
 https://github.com/dwyl/learn-travis
 https://github.com/travis-ci/travis.rb#encrypt
 
+travis login --pro
+login to travis ... only then the encryption will work
+
 encrypt the my_credentials.py file
 travis encrypt-file .\mysite\my_credentials.py -add
 https://docs.travis-ci.com/user/encrypting-files/

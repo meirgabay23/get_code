@@ -41,3 +41,5 @@ travis encrypt-file .\mysite\my_credentials.py .\mysite\my_credentials.py.enc -a
 I forgot the extra "-" before "-add", so it should be "--add"
 https://github.com/travis-ci/travis-ci/issues/9667
 Final solution: travis encrypt-file .\mysite\my_credentials.py .\mysite\my_credentials.py.enc --add
+
+Getting bad decrypt
