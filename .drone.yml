@@ -1,0 +1,32 @@
+pipeline:
+  build:
+  - name: docker  
+    image: plugins/docker
+    commands:
+      - openssl aes-256-cbc -K $encrypted_45f3547f7754_key -iv $encrypted_45f3547f7754_iv -md sha256
+        -in ./mysite/my_credentials.py.enc -out ./mysite/my_credentials.py -d
+      - python manage.py test
+      - docker build -t unfor19/get_started .
+  
+  publish:
+    settings:
+      username: docker_username
+      password: docker_password
+      repo: unfor19/get_code
+    when:
+      status: success
+
+
+# dist: xenial
+# language: python
+# python: '3.7'
+# services: docker
+# before_install:
+ 
+# script: 
+# - docker images unfor19/get_started
+#   after_success:
+# - if [ "$TRAVIS_BRANCH" == "master" ]; then
+#   echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin;
+#   docker push unfor19/get_started;
+#   fi
