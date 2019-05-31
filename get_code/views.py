@@ -31,5 +31,11 @@ def secret(request):
     msg = f"\"{{ '{os.environ['AWS_RETURN_KEY_VALUE']}': '{item}' }}\""
     return HttpResponse(msg)
 
+def make_hyperlink(my_url):
+    return f"<a href='{my_url}'>{my_url}</a>"
+
 def health(request):
-    return HttpResponse("Yo!")
+    git_path = make_hyperlink("https://github.com/unfor19/get_code")
+    docker_path = make_hyperlink("https://cloud.docker.com/repository/docker/unfor19/get-started")
+    msg = f"\"{{ 'status': 'healthy', 'container': '{docker_path}', 'project': '{git_path}' }}\""
+    return HttpResponse(msg)

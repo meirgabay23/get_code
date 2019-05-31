@@ -32,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
+# Now secret/ and secret leads to the same view,
+# same goes for health/ and health
 APPEND_SLASH = False
 
 # Application definition
