@@ -77,3 +77,8 @@ https://docs.travis-ci.com/user/docker/#pushing-a-docker-image-to-a-registry
 
 Added a deployment code
 https://cinhtau.net/2016/09/02/use-travis-ci-in-github-to-build-and-deploy-to-dockerhub/
+
+
+Travis didn't sync with Github so Omer recommended Drone.io
+I used the following drone.yml and tweaked it
+https://www.imagescape.com/blog/2017/04/28/continuous-integration-and-deployment-drone-docker-django-gunicorn-and-nginx-part-2/
