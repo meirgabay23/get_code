@@ -7,8 +7,8 @@ script:
 before_install:
 - openssl aes-256-cbc -K $encrypted_45f3547f7754_key -iv $encrypted_45f3547f7754_iv -md sha256
   -in ./mysite/my_credentials.py.enc -out ./mysite/my_credentials.py -d
-- docker build -t unfor19/get_code .
 after_success:
+- docker build -t unfor19/get_code .
 - if [ "$TRAVIS_BRANCH" == "master" ]; then
   docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
   docker push unfor19/get_code:works;
