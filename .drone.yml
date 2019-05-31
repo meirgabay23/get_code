@@ -1,20 +1,21 @@
 pipeline:
   build:
-  - name: docker  
-    image: plugins/docker
+    image: python:3.7
     commands:
       - openssl aes-256-cbc -K $encrypted_45f3547f7754_key -iv $encrypted_45f3547f7754_iv -md sha256
         -in ./mysite/my_credentials.py.enc -out ./mysite/my_credentials.py -d
       - python manage.py test
       - docker build -t unfor19/get_started .
-  
-  publish:
-    settings:
-      username: docker_username
-      password: docker_password
-      repo: unfor19/get_code
-    when:
-      status: success
+      when:
+        branch: [ master ]
+        event: [push, pull_request] # trigger step on push and pull events
+  # publish:
+  #   settings:
+  #     username: docker_username
+  #     password: docker_password
+  #     repo: unfor19/get_code
+  #   when:
+  #     status: success
 
 
 # dist: xenial
