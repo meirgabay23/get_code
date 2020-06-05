@@ -3,7 +3,7 @@ boto==2.49.0
 boto3==1.9.158
 botocore==1.12.158
 colorama==0.4.1
-Django==2.2.1
+Django==2.2.13
 docutils==0.14
 gunicorn==19.9.0
 isort==4.3.20
